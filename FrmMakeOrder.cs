@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Pizza____Poject
 {
-    public partial class FrmMakeOrder: Form
+    public partial class FrmMakeOrder : Form
     {
         public FrmMakeOrder()
         {
@@ -19,7 +19,7 @@ namespace Pizza____Poject
 
         float CalculateSelectedSizePrice()
         {
-            if(rbSmall.Checked)
+            if (rbSmall.Checked)
             {
                 return Convert.ToSingle(rbSmall.Tag);
             }
@@ -38,7 +38,7 @@ namespace Pizza____Poject
 
         float CalculateSelectedCrustTypePrice()
         {
-            if(rbThickCrust.Checked)
+            if (rbThickCrust.Checked)
             {
                 return Convert.ToSingle(rbThickCrust.Tag);
             }
@@ -51,7 +51,7 @@ namespace Pizza____Poject
         float CalculateSelectedToppingsPrice()
         {
             float TotalToppingsPrice = 0;
-            if(chkExtraChees.Checked)
+            if (chkExtraChees.Checked)
             {
                 TotalToppingsPrice += Convert.ToSingle(chkExtraChees.Tag);
             }
@@ -92,12 +92,12 @@ namespace Pizza____Poject
         void UpdateSize()
         {
             UpdateTotalPrice();
-            if(rbSmall.Checked)
+            if (rbSmall.Checked)
             {
                 lbSizeValue.Text = "Small";
                 return;
             }
-            if(rbMedium.Checked)
+            if (rbMedium.Checked)
             {
                 lbSizeValue.Text = "Medium";
                 return;
@@ -165,7 +165,7 @@ namespace Pizza____Poject
 
         void UpdateWhereToEat()
         {
-            if(rbEatin.Checked)
+            if (rbEatin.Checked)
             {
                 lbWhereToEat.Text = "Eat In";
                 return;
@@ -281,8 +281,8 @@ namespace Pizza____Poject
 
         private void btnOrderPizza_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Confirm Order", "Confirm", MessageBoxButtons.OKCancel,
-                MessageBoxIcon.Question)==DialogResult.OK)
+            if (MessageBox.Show("Confirm Order", "Confirm", MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Question) == DialogResult.OK)
             {
                 MessageBox.Show("Order Placed Successfully", "Success", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
@@ -294,7 +294,7 @@ namespace Pizza____Poject
                 gbWhereToEat.Enabled = false;
                 numericUpDown1.Enabled = false;
             }
-            
+
         }
 
         private void ResetOrder_Click(object sender, EventArgs e)

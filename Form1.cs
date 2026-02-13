@@ -17,11 +17,10 @@ namespace Pizza____Poject
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnStart_Click(object sender, EventArgs e)
         {
-            Form FrmMain = new FrmMakeOrder();
-            FrmMain.ShowDialog();
+            FrmMakeOrder Frm = new FrmMakeOrder();
+            Frm.ShowDialog();
         }
-
     }
 }
